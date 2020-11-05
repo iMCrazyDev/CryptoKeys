@@ -4,7 +4,7 @@
     crossorigin="anonymous"></script>
 	
 	<textarea type="text" id="inp" cols="100"></textarea>
-	<button onclick="document.getElementById('out').value = '';  document.getElementById('inp').value.split('\n').forEach(function(item) { try{ document.getElementById('out').value+= eosjs_ecc.privateToPublic(item) + '\n'; } catch(err) {document.getElementById('errors').value+= item + '\n'; }})   "> generate </button>
+	<button onclick="document.getElementById('out').value = '';  document.getElementById('inp').value.split('\n').forEach(function(item) { try{ document.getElementById('out').value+= eosjs_ecc.privateToPublic(item) + ':' + item + '\n'; } catch(err) {document.getElementById('errors').value+= item + '\n'; }})   "> generate </button>
 	<textarea type="text" id="out" cols="100"></textarea>
 	<textarea type="text" id="errors" cols="100"></textarea>
 </html>
